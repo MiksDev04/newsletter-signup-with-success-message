@@ -70,10 +70,10 @@ Form validation in not part of my favorites. In fact it is one the things I hate
 
 
 
-[def]: ./screenshot/img1.png
-[def]: ./screenshot/img2.png
-[def]: ./screenshot/img3.png
-[def]: ./screenshot/img4.png
-[def]: ./screenshot/img5.png
-[def]: ./screenshot/img6.png
-[def]: ./screenshot/img7.png
+[./screenshot/img1.png]: ./screenshot/img1.png
+[./screenshot/img2.png]: ./screenshot/img2.png
+[./screenshot/img3.png]: ./screenshot/img3.png
+[./screenshot/img4.png]: ./screenshot/img4.png
+[./screenshot/img5.png]: ./screenshot/img5.png
+[./screenshot/img6.png]: ./screenshot/img6.png
+[./screenshot/img7.png]: ./screenshot/img7.png
