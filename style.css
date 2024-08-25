@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   font-family: Roboto;
+}
+
+*, *::before, *::after{
+   box-sizing: border-box;
+}
+
+:root{
+    /* ## Colors */
+    /* ### Primary */
+    --Tomato: hsl(4, 100%, 67%);
+    /* ### Neutral */
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+    --fs: 16px;
+    --fw400: 400;
+    --fw700: 700;
+}
+
+body{
+   background-color: var(--Charcoal-Grey);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100dvh;
+}
+
+.wrapper{
+    
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+    padding: 1.5rem;
+    border-radius: 30px;
+    background-color: var(--White);
+    width: clamp(375px, 100%, 950px);
+    overflow: hidden;
+}
+/* .content * {
+    outline: 1px solid lime;
+} */
+.content{
+    flex:  1 1 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 2rem;
+}
+.content h1{
+    font-size: clamp(2rem, 9vh, 3.5rem);
+    color: var(--Dark-Slate-Grey);
+}
+
+.content h4, .content ul li{
+    font-size: var(--fs);
+    font-weight: var(--fw400);
+    color: var(--Charcoal-Grey);
+}
+.content ul{
+    padding: .7rem 0;
+}
+.content ul li{
+    font-weight: var(--fw400);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .4rem;
+}
+.content ul li span{
+    content: url('./assets/images/icon-list.svg');
+}
+form{
+    display: grid;
+    gap: 1.5rem;
+}
+.email-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    gap: .5rem;
+}
+#email{
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid var(--Grey);
+    border-radius: 5px;
+}
+.error-email{
+    outline: 1px solid var(--Tomato);
+    background-color: rgb(255, 230, 226);
+}
+form input::placeholder{
+    color: var(--Grey);
+    font-size: var(--fs);
+}
+form .error-email::placeholder{
+    color: var(--Tomato);
+}
+form .label{
+    color: var(--Dark-Slate-Grey);
+}
+form .error{
+    opacity: 0;
+    color: var(--Tomato);
+}
+form span.label, form span.error{
+    font-size: 12px;
+    font-weight: var(--fw700);
+}
+form button{
+    padding: 1.2rem;
+    border: none;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    border-radius: 5px;
+    font-size: var(--fs);
+    font-weight: var(--fw400);
+}
+form button:hover{
+    background-color: var(--Tomato);
+}
+.wrapper .illustration {
+    content: url('./assets/images/illustration-sign-up-desktop.svg');
+}
+.success{
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: var(--Charcoal-Grey);
+    width: 100%;
+    height: 100%;
+    z-index: 111;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.success-wrapper{
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    background-color: var(--White);
+    border-radius: 20px;
+}
+.success strong{
+    font-weight: var(--fw700);
+    color: var(--Dark-Slate-Grey);
+}
+.success-wrapper p{
+    color: var(--Charcoal-Grey);
+    font-weight: var(--fw400);
+}
+
+@media (max-width: 500px) {
+    .wrapper{
+        gap: 0;
+        padding: 0;
+        border-radius: 0;
+        overflow: hidden;
+    }
+    .content{
+        padding: 2rem;
+        gap: 1rem;
+    }
+    .wrapper h1{
+        font-size: 2.5rem;
+    }
+    .content ul{
+        padding-bottom: 1rem;
+    }
+    .content ul li{
+        align-items: flex-start;
+    }
+    .wrapper .illustration{
+        width: 100%;
+        overflow: hidden;
+        content: url('./assets/images/illustration-sign-up-mobile.svg');
+    }
+    form .email-section{
+        gap: .5rem;
+    }
+    form{
+        gap: 1rem;
+    }
+    .success{
+        height: 110%;
+    }
+    .success-wrapper{
+        padding: 1.5rem;
+        padding-top: 8rem;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .success-wrapper button{
+        display: block;
+        margin-top: auto;
+        width: auto;
+        margin-bottom: 1rem;
+    }
+}
