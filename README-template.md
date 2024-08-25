@@ -31,14 +31,14 @@ Users should be able to:
 
 ### Screenshot
 
-![][./screenshot/img1]
-![][./screenshot/img2]
-![][./screenshot/img3]
-![][./screenshot/img4]
-![][./screenshot/img5]
-![][./screenshot/img6]
-![][./screenshot/img7]
-
+![][./screenshot/img1.png]
+![][./screenshot/img2.png]
+![][./screenshot/img3.png]
+![][./screenshot/img4.png]
+![][./screenshot/img5.png]
+![][./screenshot/img6.png]
+![][./screenshot/img7.png]
+.png
 
 ### Links
 
